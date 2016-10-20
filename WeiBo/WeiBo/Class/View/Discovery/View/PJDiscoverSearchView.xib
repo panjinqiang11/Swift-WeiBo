@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6zM-XR-vz1" customClass="PJDiscoverSearchView" customModule="WeiBo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="43"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuP-QM-ft4">
+                    <rect key="frame" x="336" y="0.0" width="30" height="43"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelAction:" destination="6zM-XR-vz1" eventType="touchUpInside" id="2xs-Au-aan"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBm-GR-Rmn">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="6zM-XR-vz1" id="1sh-jl-ve8"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TuP-QM-ft4" secondAttribute="bottom" id="DHZ-Xi-4Ey"/>
+                <constraint firstItem="YBm-GR-Rmn" firstAttribute="leading" secondItem="6zM-XR-vz1" secondAttribute="leading" id="Fyp-Bn-9wx"/>
+                <constraint firstItem="YBm-GR-Rmn" firstAttribute="top" secondItem="6zM-XR-vz1" secondAttribute="top" id="Ml8-KO-enC"/>
+                <constraint firstAttribute="trailing" secondItem="YBm-GR-Rmn" secondAttribute="trailing" id="NlA-gC-s0F"/>
+                <constraint firstAttribute="bottom" secondItem="YBm-GR-Rmn" secondAttribute="bottom" id="liv-bx-HzF"/>
+                <constraint firstAttribute="trailing" secondItem="TuP-QM-ft4" secondAttribute="trailing" id="p1S-RU-h8B"/>
+                <constraint firstItem="TuP-QM-ft4" firstAttribute="top" secondItem="6zM-XR-vz1" secondAttribute="top" id="wdE-dE-rqL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="TuP-QM-ft4" id="mAe-TQ-Rac"/>
+                <outlet property="rightconstraint" destination="NlA-gC-s0F" id="ztn-Vj-qtz"/>
+                <outlet property="textFiled" destination="YBm-GR-Rmn" id="hZ2-0u-HMv"/>
+            </connections>
+            <point key="canvasLocation" x="801" y="11.5"/>
+        </view>
+    </objects>
+</document>
